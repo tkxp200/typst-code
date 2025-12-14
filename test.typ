@@ -36,10 +36,10 @@ Typst には、条件文、ループ、関数、メソッドなどの強力な�
 #show math.equation: set text(font:("New Computer Modern Math", "MS Mincho"))
 #set enum(numbering: "(1)")
 
-#let ArrayJoin(arr, join) = {
+#let Join(arr, join) = {
   for i in range(arr.len()){
     if i != (arr.len() - 1){
-      [#arr.at(i)#join #med]
+      [#arr.at(i)#join #sym.space.med]
     }
     else{
       [#arr.at(i)]
@@ -60,8 +60,9 @@ Typst には、条件文、ループ、関数、メソッドなどの強力な�
 
 = 水槽の水温を25.0℃に設定し、7日間にわたって水温[℃]を温度計で測定したところ、次のようになった。
 
+#let numbers = (24.1, 25.2, 26.5, 25.3, 24.2, 24.8, 25.6)
 $
-  24.1, 25.2, 26.5, 25.3, 24.2, 24.8, 25.6
+  #Join(numbers, [,])
 $
 
 + 平均を求めよ。

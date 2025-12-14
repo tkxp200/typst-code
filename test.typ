@@ -24,9 +24,9 @@ Typst には、条件文、ループ、関数、メソッドなどの強力な�
 
 #figure(
   table(
-  columns: count,
-  ..nums.map(n => $F_#n$),
-  ..nums.map(n => str(fib(n))),
+    columns: count,
+    ..nums.map(n => $F_#n$),
+    ..nums.map(n => str(fib(n))),
   )
 )
 

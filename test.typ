@@ -72,7 +72,7 @@ $
   測定結果を$x$、測定結果の標本平均を$macron(x)$とすると、
   $
     macron(x) &= 1 / numbers.len() sum_i x_i \
-      &eq.dots.down #calc.round(numbers_avg, digits: 1)
+      &eq.dots.down #calc.round(numbers_avg, digits: 1) thick [℃]
   $
 
 + 分散及び標準偏差を求めよ。

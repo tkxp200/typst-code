@@ -22,11 +22,13 @@ Typst には、条件文、ループ、関数、メソッドなどの強力な�
   else { fib(n - 1) + fib(n - 2) }
 )
 
-#align(center, table(
+#figure(
+  table(
   columns: count,
   ..nums.map(n => $F_#n$),
   ..nums.map(n => str(fib(n))),
-))
+  )
+)
 
 
 #show: equate.with(breakable: true, sub-numbering: false, number-mode: "label")

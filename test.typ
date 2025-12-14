@@ -67,6 +67,14 @@ $
 
 + 平均を求めよ。
 
+  #let numbers_avg = numbers.sum() / numbers.len()
+
+  測定結果を$x$、測定結果の標本平均を$macron(x)$とすると、
+  $
+    macron(x) &= 1 / numbers.len() sum_i x_i \
+      &=#numbers_avg
+  $
+
 + 分散及び標準偏差を求めよ。
 
 

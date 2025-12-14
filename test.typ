@@ -95,6 +95,6 @@ $
 
   標準偏差は
   $
-    s = sqrt(s^2) eq.dots.down #calc.round(calc.sqrt(numbers_var), digits: 2)
+    s = sqrt(s^2) eq.dots.down #calc.round(calc.sqrt(numbers_var), digits: 2) thick [℃]
   $
 

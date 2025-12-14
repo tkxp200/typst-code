@@ -75,7 +75,26 @@ $
       &eq.dots.down #calc.round(numbers_avg, digits: 1) thick [℃]
   $
 
+  #let CalculateVariance(arr) = {
+    let total_diff_square = 0
+    for i in arr{
+      let diff = i - numbers_avg
+      total_diff_square += diff * diff
+    }
+    return total_diff_square / arr.len()
+  }
+
 + 分散及び標準偏差を求めよ。
 
+  #let numbers_var = CalculateVariance(numbers)
+  標本分散を$s^2$、標準偏差を$s$とすると、標本分散は
+  $
+    s^2 &= 1 / numbers.len() sum_i (x_i - macron(x))^2 \
+    &= #calc.round(numbers_var, digits: 2) thick [℃]
+  $
 
+  標準偏差は
+  $
+    s = sqrt(s^2) eq.dots.down #calc.round(calc.sqrt(numbers_var), digits: 2)
+  $
 

@@ -36,7 +36,7 @@ Typst には、条件文、ループ、関数、メソッドなどの強力な�
 #show math.equation: set text(font:("New Computer Modern Math", "MS Mincho"))
 #set enum(numbering: "(1)")
 
-#let listup(arr, join) = {
+#let ArrayJoin(arr, join) = {
   for i in range(arr.len()){
     if i != (arr.len() - 1){
       [#arr.at(i)#join #med]

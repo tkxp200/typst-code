@@ -98,3 +98,12 @@ $
     s = sqrt(s^2) eq.dots.down #calc.round(calc.sqrt(numbers_var), digits: 2) thick [℃]
   $
 
+#pagebreak()
+
+#set page(
+  header: [データ操作]
+)
+
+#let data = csv("./data.csv")
+
+#data

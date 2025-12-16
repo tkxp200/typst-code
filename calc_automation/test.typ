@@ -108,9 +108,10 @@ $
 #let A_4 = nt.matmul(A_3, A)
 
 $
-  #nt.p(A)^2 &= #nt.p(A_2) \
-  #nt.p(A)^3 &= #nt.p(A_3) \
-  #nt.p(A)^4 &= #nt.p(A_4)
+  A^1 &= #nt.p(A) \
+  A^2 &= #nt.p(A)^2 &= #nt.p(A_2) \
+  A^3 &= #nt.p(A)^3 &= #nt.p(A_3) \
+  A^4 &= #nt.p(A)^4 &= #nt.p(A_4)
 $
 
 #pagebreak()

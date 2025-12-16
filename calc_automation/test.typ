@@ -109,14 +109,18 @@ $
 
 #header.insert(0, [番号])
 #header.push([売上])
+#header.push([累計売上])
 
 #{
   data = data.enumerate(start: 1).map(c => c.flatten())
 
+  let total_price = 0
   for i in range(data.len()){
     let price = int(data.at(i).at(-1))
     let quantity = int(data.at(i).at(-2))
+    total_price += price * quantity
     data.at(i).push(price * quantity)
+    data.at(i).push(total_price)
   }
 }
 

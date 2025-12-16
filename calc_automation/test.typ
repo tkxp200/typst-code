@@ -141,11 +141,11 @@ $
   return calc.round(A_pow_n.at(0).at(1))
 }
 
-#let indexes = (5, 10, 15, 20, 25, 30)
+#let indexes = (5, 10, 15, 20, 25, 30, 35, 40)
 
 #figure(
   table(
-    inset: 10pt,
+    inset: 8pt,
     columns: indexes.len() + 1,
     table.header([$n$], ..indexes.map(i => str(i))),
     [$F_n$], ..indexes.map(i => str(CalculateFibonacci(i)))

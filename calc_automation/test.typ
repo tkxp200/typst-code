@@ -105,10 +105,12 @@ $
 #let A = ((0,1), (1,1))
 #let A_2 = nt.matmul(A,A)
 #let A_3 = nt.matmul(A_2, A)
+#let A_4 = nt.matmul(A_3, A)
 
 $
   #nt.p(A)^2 &= #nt.p(A_2) \
-  #nt.p(A)^3 &= #nt.p(A_3)
+  #nt.p(A)^3 &= #nt.p(A_3) \
+  #nt.p(A)^4 &= #nt.p(A_4)
 $
 
 #pagebreak()

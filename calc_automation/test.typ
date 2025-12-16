@@ -1,5 +1,6 @@
 #import "@preview/physica:0.9.2": *
 #import "@preview/equate:0.3.2" : *
+#import "@preview/lilaq:0.5.0" as lq
 
 #show figure.where(
   kind: table
@@ -132,3 +133,18 @@ $
     ..data.flatten().map(c => str(c))
   )
 )
+
+#let day_total_sales
+#let day_sales = data.map(r => (r.at(1), r.at(-2)))
+#{
+  day_total_sales = day_sales.fold(
+    (:),
+    (acc, x) => {
+      let day = x.at(0)
+      acc.insert(day, acc.at(day, default:0) + x.at(1))
+      return acc
+    }
+  )
+}
+#day_total_sales.keys()
+#day_total_sales.values()

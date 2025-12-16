@@ -1,5 +1,6 @@
 #import "@preview/physica:0.9.2": *
 #import "@preview/equate:0.3.2" : *
+#import "@preview/numty:0.1.0" as nt
 #import "@preview/lilaq:0.5.0" as lq
 
 #show figure.where(
@@ -98,6 +99,17 @@ $
   $
     s = sqrt(s^2) eq.dots.down #calc.round(calc.sqrt(numbers_var), digits: 2) thick [℃]
   $
+
+#pagebreak()
+
+#let A = ((0,1), (1,1))
+#let A_2 = nt.matmul(A,A)
+#let A_3 = nt.matmul(A_2, A)
+
+$
+  #nt.p(A)^2 &= #nt.p(A_2) \
+  #nt.p(A)^3 &= #nt.p(A_3)
+$
 
 #pagebreak()
 

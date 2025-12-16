@@ -141,7 +141,7 @@ $
   return calc.round(A_pow_n.at(0).at(1))
 }
 
-#let indexes = (5, 10, 15, 20, 25, 30, 35, 40)
+#let indexes = (0, 5, 10, 15, 20, 25, 30)
 
 #figure(
   table(
@@ -149,6 +149,14 @@ $
     columns: indexes.len() + 1,
     table.header([$n$], ..indexes.map(i => str(i))),
     [$F_n$], ..indexes.map(i => str(CalculateFibonacci(i)))
+  )
+)
+
+#figure(
+  lq.diagram(
+    lq.plot(
+      range(0,31), x => CalculateFibonacci(x)
+    )
   )
 )
 

@@ -134,10 +134,8 @@ $
   )
 )
 
-#let day_total_sales
 #let day_sales = data.map(r => (r.at(1), r.at(-2)))
-#{
-  day_total_sales = day_sales.fold(
+#let day_total_sales = day_sales.fold(
     (:),
     (acc, x) => {
       let day = x.at(0)
@@ -145,6 +143,6 @@ $
       return acc
     }
   )
-}
+
 #day_total_sales.keys()
 #day_total_sales.values()

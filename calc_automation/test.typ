@@ -131,8 +131,17 @@ $
   return ((calc.pow(lambda_1, n), 0), (0, calc.pow(lambda_2, n)))
 }
 
+#let CalculatePowerOfMatrixA(n) = {
+  let dp_inv = matrix.mul-mat(PowerOfMatrixD(n), P_inv)
+  return matrix.mul-mat(P, dp_inv)
+}
+
 #nt.print(P_inv)
 #nt.print(PowerOfMatrixD(40))
+
+$
+  A^20 eq.dots.down #nt.p(CalculatePowerOfMatrixA(20))
+$
 
 #pagebreak()
 

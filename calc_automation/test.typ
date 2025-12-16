@@ -151,7 +151,6 @@ $
     [$F_n$], ..indexes.map(i => str(CalculateFibonacci(i))),
     [$F_(n+1) \/ F_n$ ],
     ..indexes.map(i => str(calc.round(CalculateFibonacci(i+1)/ CalculateFibonacci(i), digits: 3)))
-
   )
 )
 

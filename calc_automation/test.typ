@@ -124,9 +124,11 @@ $
   lambda_2 = #lambda_2
 $
 
+#let P = ((2, 2), (1 + calc.sqrt(5), 1 - calc.sqrt(5)))
 
+#let P_inv = matrix.inverse(P)
 
-
+#nt.print(P_inv)
 
 #pagebreak()
 

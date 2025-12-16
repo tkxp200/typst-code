@@ -112,9 +112,13 @@ $
 
 #{
   data = data.enumerate(start: 1).map(c => c.flatten())
-}
 
-#data
+  for i in range(data.len()){
+    let price = int(data.at(i).at(-1))
+    let quantity = int(data.at(i).at(-2))
+    data.at(i).push(price * quantity)
+  }
+}
 
 #figure(
   table(

@@ -126,8 +126,13 @@ $
 
 #let P = ((2, 2), (1 + calc.sqrt(5), 1 - calc.sqrt(5)))
 #let P_inv = matrix.inverse(P)
+#let D = ((lambda_1, 0), (0, lambda_2))
+#let PowerOfMatrixD(n) = {
+  return ((calc.pow(lambda_1, n), 0), (0, calc.pow(lambda_2, n)))
+}
 
 #nt.print(P_inv)
+#nt.print(PowerOfMatrixD(40))
 
 #pagebreak()
 

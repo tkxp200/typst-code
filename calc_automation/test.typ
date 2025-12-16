@@ -112,7 +112,7 @@ $
 #figure(
   table(
     columns: header.len(),
-    inset: 10pt,
+    inset: 7pt,
     table.header(..header),
     ..data.flatten()
   )

@@ -141,21 +141,21 @@ $
   return calc.round(A_pow_n.at(0).at(1))
 }
 
-#let indexes = (0, 5, 10, 15, 20, 25, 30)
+#let indexes = range(1, 11)
 
 #figure(
   table(
     inset: 8pt,
     columns: indexes.len() + 1,
     table.header([$n$], ..indexes.map(i => str(i))),
-    [$F_n$], ..indexes.map(i => str(CalculateFibonacci(i)))
+    [$F_n$], ..indexes.map(i => str(CalculateFibonacci(i))),
   )
 )
 
 #figure(
   lq.diagram(
     lq.plot(
-      range(0,31), x => CalculateFibonacci(x)
+      range(0,11), x => CalculateFibonacci(x)
     )
   )
 )

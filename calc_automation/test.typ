@@ -149,14 +149,31 @@ $
     columns: indexes.len() + 1,
     table.header([$n$], ..indexes.map(i => str(i))),
     [$F_n$], ..indexes.map(i => str(CalculateFibonacci(i))),
+    [$F_(n+1) \/ F_n$ ],
+    ..indexes.map(i => str(calc.round(CalculateFibonacci(i+1)/ CalculateFibonacci(i), digits: 3)))
+
   )
 )
 
 #figure(
   lq.diagram(
+    legend: (position: top, inset: 0.1em),
+    lq.yaxis(
+      position: right,
+      label: [$F_(n+1) \/ F_n$],
+      lq.plot(
+        range(1,11),
+        x => CalculateFibonacci(x+1)/ CalculateFibonacci(x),
+        label: text(size: 10pt)[$F_(n+1) \/ F_n$]
+      )
+    ),
+    xlabel: [$n$],
+    ylabel: [$F_n$],
     lq.plot(
-      range(0,11), x => CalculateFibonacci(x)
-    )
+      range(1,11),
+      x => CalculateFibonacci(x),
+        label: text(size: 10pt)[$F_n$]
+    ),
   )
 )
 

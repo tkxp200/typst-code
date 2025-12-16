@@ -114,6 +114,12 @@ $
   A^4 &= #nt.p(A)^4 &= #nt.p(A_4)
 $
 
+#let lambda_1 = (1 + calc.sqrt(5)) / 2
+#let lambda_2 = (1 - calc.sqrt(5)) / 2
+
+#lambda_1\
+#lambda_2
+
 #pagebreak()
 
 #set page(

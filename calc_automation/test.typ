@@ -107,8 +107,13 @@ $
 #let data = csv("./data.csv")
 #let header = data.remove(0)
 
-// #data.enumerate().map(row => row.flatten())
+#header.insert(0, [番号])
 
+#{
+  data = data.enumerate()
+}
+
+// .map(row => row.flatten())
 #figure(
   table(
     columns: header.len(),
@@ -117,3 +122,4 @@ $
     ..data.flatten()
   )
 )
+.map(c => str(c))

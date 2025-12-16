@@ -108,10 +108,13 @@ $
 #let header = data.remove(0)
 
 #header.insert(0, [番号])
+#header.push([売上])
 
 #{
-  data = data.enumerate(start: 1)
+  data = data.enumerate(start: 1).map(c => c.flatten())
 }
+
+#data
 
 #figure(
   table(

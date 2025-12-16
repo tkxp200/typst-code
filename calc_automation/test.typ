@@ -136,9 +136,13 @@ $
   return matrix.mul-mat(P, dp_inv)
 }
 
+#let CalculateFibonacci(n) = {
+  let A_pow_n = CalculatePowerOfMatrixA(n)
+  return calc.round(A_pow_n.at(0).at(1))
+}
+
 #nt.print(P_inv)
 #nt.print(PowerOfMatrixD(40))
-
 $
   A^20 eq.dots.down #nt.p(CalculatePowerOfMatrixA(20))
 $

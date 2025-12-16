@@ -105,5 +105,10 @@ $
 )
 
 #let data = csv("./data.csv")
+#let header = data.remove(0)
+
+#header
 
 #data
+
+// #data.enumerate().map(row => row.flatten())

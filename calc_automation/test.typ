@@ -141,11 +141,16 @@ $
   return calc.round(A_pow_n.at(0).at(1))
 }
 
-#nt.print(P_inv)
-#nt.print(PowerOfMatrixD(40))
-$
-  A^20 eq.dots.down #nt.p(CalculatePowerOfMatrixA(20))
-$
+#let indexes = (5, 10, 15, 20, 25, 30)
+
+#figure(
+  table(
+    inset: 10pt,
+    columns: indexes.len() + 1,
+    table.header([$n$], ..indexes.map(i => str(i))),
+    [$F_n$], ..indexes.map(i => str(CalculateFibonacci(i)))
+  )
+)
 
 #pagebreak()
 

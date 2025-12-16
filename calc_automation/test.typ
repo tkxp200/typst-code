@@ -136,13 +136,33 @@ $
 
 #let day_sales = data.map(r => (r.at(1), r.at(-2)))
 #let day_total_sales = day_sales.fold(
-    (:),
-    (acc, x) => {
-      let day = x.at(0)
-      acc.insert(day, acc.at(day, default:0) + x.at(1))
-      return acc
-    }
-  )
+  (:),
+  (acc, x) => {
+    let day = x.at(0)
+    acc.insert(day, acc.at(day, default:0) + x.at(1))
+    return acc
+  }
+)
 
-#day_total_sales.keys()
-#day_total_sales.values()
+
+#figure(
+  lq.diagram(
+    title: [日付別売上総額],
+    width: 9cm,
+    height: 6cm,
+    xaxis: (
+      ticks: day_total_sales.keys().enumerate(),
+      label: [日付],
+    ),
+    yaxis: (
+      exponent: none,
+      lim: (5000, 6500),
+      label: [売上総額[円]],
+    ),
+    lq.bar(
+      range(day_total_sales.keys().len()),
+      day_total_sales.values(),
+      width: 0.5
+    )
+  )
+)

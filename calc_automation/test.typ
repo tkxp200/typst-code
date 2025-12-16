@@ -110,7 +110,7 @@ $
 #header.insert(0, [番号])
 
 #{
-  data = data.enumerate()
+  data = data.enumerate(start: 1)
 }
 
 // .map(row => row.flatten())

@@ -113,13 +113,11 @@ $
   data = data.enumerate(start: 1)
 }
 
-// .map(row => row.flatten())
 #figure(
   table(
     columns: header.len(),
     inset: 7pt,
     table.header(..header),
-    ..data.flatten()
+    ..data.flatten().map(c => str(c))
   )
 )
-.map(c => str(c))

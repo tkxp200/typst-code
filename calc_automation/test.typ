@@ -1,5 +1,6 @@
 #import "@preview/physica:0.9.2": *
 #import "@preview/equate:0.3.2" : *
+#import "@preview/cetz:0.4.2" : util.matrix
 #import "@preview/numty:0.1.0" as nt
 #import "@preview/lilaq:0.5.0" as lq
 
@@ -103,9 +104,10 @@ $
 #pagebreak()
 
 #let A = ((0,1), (1,1))
-#let A_2 = nt.matmul(A,A)
-#let A_3 = nt.matmul(A_2, A)
-#let A_4 = nt.matmul(A_3, A)
+#let A_2 = matrix.mul-mat(A,A)
+#let A_3 = matrix.mul-mat(A_2, A)
+#let A_4 = matrix.mul-mat(A_3, A)
+
 
 $
   A^1 &= #nt.p(A) \
@@ -117,8 +119,14 @@ $
 #let lambda_1 = (1 + calc.sqrt(5)) / 2
 #let lambda_2 = (1 - calc.sqrt(5)) / 2
 
-#lambda_1\
-#lambda_2
+$
+  lambda_1 = #lambda_1\
+  lambda_2 = #lambda_2
+$
+
+
+
+
 
 #pagebreak()
 

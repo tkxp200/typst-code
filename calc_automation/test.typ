@@ -141,6 +141,8 @@ $
   return calc.round(A_pow_n.at(0).at(1))
 }
 
+#nt.print(CalculatePowerOfMatrixA(20))
+
 #let indexes = range(1, 11)
 
 #figure(
